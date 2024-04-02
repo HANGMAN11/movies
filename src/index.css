@@ -57,18 +57,16 @@ nav ul li a:hover:before {
 nav ul li a:hover {
   color: rgba(255, 255, 255, 0.799);
 }
-.search{
+.search {
   display: flex;
-  
 }
 .search-btn {
   display: flex;
   padding: 0.6rem 1rem;
-  color:white;
+  color: white;
   background-color: transparent;
   border: none;
   cursor: pointer;
-
 }
 
 .inputText {
@@ -89,14 +87,67 @@ nav ul li a:hover {
 .search:hover .inputText {
   opacity: 1;
 }
-.inputText::placeholder{
+.inputText::placeholder {
   color: white;
 }
 
-.container{
+.container {
   margin: auto;
   width: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.movie {
+  box-shadow: 0 5px 10px rgba(0, 0, 0 0.5);
+  background-color: var(--secondary-color);
+  margin: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 20%;
+  height: 5%;
+}
+
+.movie .poster {
+  width: 100%;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.movie-details .box {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.movie-details .title {
+  width: 160px;
+  text-align: center;
+}
+
+.movie-details .overview {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  max-height: 100%;
+  background-color: var(--secondary-color);
+  opacity: 0.9;
+  color: white;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: all 0.4s ease-in-out;
+  overflow-y: auto;
+  transform: translateY(101%);
+}
+
+.movie-details:hover .overview{
+  transform: translateY(0%);
 }
